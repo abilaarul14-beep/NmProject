@@ -1,8 +1,8 @@
 body {
     font-family: Arial;
     background: #f4f6f9;
-    margin: 0;
     text-align: center;
+    margin: 0;
 }
 
 nav {
@@ -14,28 +14,54 @@ nav {
 .container {
     margin-top: 80px;
 }
+.square-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+
+    display: block;
+    margin: 20px auto;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
 
 .btn {
     display: block;
     width: 200px;
-    margin: 15px auto;
+    margin: 10px auto;
     padding: 12px;
     background: #3498db;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 18px;
 }
 
-.btn:hover {
-    background: #2980b9;
+ul {
+    list-style: none;
 }
-.square-img {
-    width: 200px;          /* small size */
-    height: 200px;         /* square shape */
-    object-fit: cover;     /* crop nicely inside square */
-    border: 2px solid #333;
-    border-radius: 10px;   /* optional: rounded corners */
-    display: block;
-    margin: 20px auto;     /* center the image */
+
+li {
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
 }

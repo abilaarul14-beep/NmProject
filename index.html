@@ -1,29 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Home - Task  reminder</title>
+    <title>Task Reminder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <h2>📌 Task </h2>
-    </nav>
+<nav>
+    <h2>📌 Task Reminder</h2>
+</nav>
 
-    <div class="container">
-        <h1>Welcome 👋</h1>
-        <p>Manage your tasks easily and never miss deadlines.</p>
-        <img src="book.png" alt="Books Image" class="square-img">
+<!-- 🔐 LOGIN SECTION -->
+<div class="container" id="loginPage">
+    <h1>🔐 Student Login</h1>
 
-        <!-- Only 2 Buttons -->
-        <a href="tasks.html" class="btn">📋 Tasks</a>
-        <a href="about.html" class="btn">ℹ️ About</a>
-    </div>
+    <input type="text" id="username" placeholder="Enter Username"><br><br>
+    <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- 🏠 HOME SECTION (HIDDEN FIRST) -->
+<div class="container" id="homePage" style="display:none;">
+    <h1>Welcome 👋</h1>
+    <p>Manage your tasks easily</p>
+    <img src="book.png" class="square-img">
+
+    <a href="task-entry.html" class="btn">📋 Add Task</a>
+    <a href="task-list.html" class="btn">📄 View Tasks</a>
+    <a href="about.html" class="btn">ℹ️ About</a>
+
+    <br><br>
+    <button onclick="logout()">🚪 Logout</button>
+</div>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user === "student" && pass === "123") {
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("homePage").style.display = "block";
+    } else {
+        alert("Invalid Login!");
+    }
+}
+
+function logout() {
+    document.getElementById("loginPage").style.display = "block";
+    document.getElementById("homePage").style.display = "none";
+}
+</script>
 
 </body>
-
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 Student Login</h1>
+
+    <input type="text" id="username" placeholder="Enter Username"><br><br>
+    <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+    <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if(user === "student" && pass === "123") {
+        window.location.href = "index.html";
+    } else {
+        alert("Invalid Login!");
+    }
+}
+</script>
+
+</body>
+</html>
